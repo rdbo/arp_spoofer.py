@@ -6,7 +6,7 @@ def usage():
     print("sudo python3 arp_spoofer.py <arguments>")
     print("-t (--target):              specify target's local ip address")
     print("-m (--mac):                 attacker's mac address")
-    print("-g (--gateway):             gateway's ip address (for IP forwarding)")
+    print("-g (--gateway):             gateway's ip address")
     print("-b (--broadcast)[optional]: network broadcast")
     print("-i (--interval)[optinal]:   interval between packets")
     print("-c (--count)[optional]:     ammount of packets to send (default 100)")
