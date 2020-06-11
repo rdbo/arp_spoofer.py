@@ -6,7 +6,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
 ```
-[*] Usage (run as root/superuser):
+[*] Usage (run as root):
 sudo python3 arp_spoofer.py <arguments>
 -t (--target):              specify target's local ip address
 -m (--mac):                 attacker's mac address
