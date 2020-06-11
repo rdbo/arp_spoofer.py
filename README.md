@@ -10,7 +10,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 sudo python3 arp_spoofer.py <arguments>
 -t (--target):              specify target's local ip address
 -m (--mac):                 attacker's mac address
--g (--gateway):             gateway's ip address (for IP forwarding)
+-g (--gateway):             gateway's ip address
 -b (--broadcast)[optional]: network broadcast
 -i (--interval)[optinal]:   interval between packets
 -c (--count)[optional]:     ammount of packets to send (default 100)
